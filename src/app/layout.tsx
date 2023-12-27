@@ -6,13 +6,11 @@ import {Metadata} from 'next';
 import {BASE_URL, SITE_DESCRIPTION, SITE_TITLE} from '@/site/config';
 import StateProvider from '@/state/AppStateProvider';
 import ThemeProviderClient from '@/site/ThemeProviderClient';
-import Nav from '@/site/Nav';
 import ToasterWithThemes from '@/toast/ToasterWithThemes';
 import PhotoEscapeHandler from '@/photo/PhotoEscapeHandler';
 
 import '../site/globals.css';
 import Header from '@/site/Header';
-import FooterStatic from '@/site/FooterStatic';
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
@@ -37,19 +35,7 @@ export const metadata: Metadata = {
     rel: 'icon',
     type: 'image/png',
     sizes: '180x180',
-  }, {
-    url: '/favicons/light.png',
-    rel: 'icon',
-    media: '(prefers-color-scheme: light)',
-    type: 'image/png',
-    sizes: '32x32',
-  }, {
-    url: '/favicons/dark.png',
-    rel: 'icon',
-    media: '(prefers-color-scheme: dark)',
-    type: 'image/png',
-    sizes: '32x32',
-  }, {
+  },  {
     url: '/favicons/apple-touch-icon.png',
     rel: 'icon',
     type: 'image/png',
