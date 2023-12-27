@@ -24,7 +24,6 @@ export default function Badge({
       'text-medium',
       'font-medium text-[0.7rem]',
       interactive && 'hover:text-gray-900 dark:hover:text-gray-100',
-      interactive && 'active:bg-gray-200 dark:active:bg-gray-700/60',
     );
     }
   };

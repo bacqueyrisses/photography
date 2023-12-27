@@ -30,13 +30,13 @@ export default async function HomePage({ searchParams }: PaginationParams) {
     getPhotosCached({ limit }),
     getPhotosCountCached(),
   ]);
-  
+
   const showMorePhotos = count > photos.length;
 
   return (
     photos.length > 0
       ? <div className="space-y-4">
-        <AnimateItems
+         <AnimateItems
           className="space-y-1"
           duration={0.7}
           staggerDelay={0.15}

@@ -1,13 +1,13 @@
-import { Photo, photoHasCameraData, photoHasExifData, titleForPhoto } from '.';
+import {Photo, photoHasCameraData, photoHasExifData, titleForPhoto} from '.';
 import SiteGrid from '@/components/SiteGrid';
 import ImageLarge from '@/components/ImageLarge';
-import { cc } from '@/utility/css';
+import {cc} from '@/utility/css';
 import Link from 'next/link';
-import { pathForPhoto, pathForPhotoShare } from '@/site/paths';
+import {pathForPhoto, pathForPhotoShare} from '@/site/paths';
 import PhotoTags from '@/tag/PhotoTags';
 import ShareButton from '@/components/ShareButton';
 import PhotoCamera from '../camera/PhotoCamera';
-import { cameraFromPhoto } from '@/camera';
+import {cameraFromPhoto} from '@/camera';
 import PhotoFilmSimulation from '@/simulation/PhotoFilmSimulation';
 
 export default function PhotoLarge({
@@ -36,7 +36,7 @@ export default function PhotoLarge({
   const tagsToShow = photo.tags.filter(t => t !== primaryTag);
 
   const camera = cameraFromPhoto(photo);
-  
+
   const renderMiniGrid = (children: JSX.Element, rightPadding = true) =>
     <div className={cc(
       'flex gap-y-4',
@@ -87,7 +87,7 @@ export default function PhotoLarge({
                 type="text-only"
               />
               {showSimulation && photo.filmSimulation &&
-                <div className="translate-x-[-0.3rem]"> 
+                <div className="translate-x-[-0.3rem]">
                   <PhotoFilmSimulation
                     simulation={photo.filmSimulation}
                   />

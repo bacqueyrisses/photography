@@ -60,18 +60,19 @@ export default function Nav({ showTextLinks }: { showTextLinks?: boolean }) {
                 'w-full min-h-[4rem]',
                 'leading-none',
               )}>
-              <div className="flex flex-grow items-center gap-4">
-                <ViewSwitcher
-                  currentSelection={switcherSelectionForPath()}
-                  showAdmin={isLoggedIn}
-                />
+              <div className="flex items-center gap-4">
+                {/*<ViewSwitcher*/}
+                {/*  currentSelection={switcherSelectionForPath()}*/}
+                {/*  showAdmin={isLoggedIn}*/}
+                {/*/>*/}
                 {showTextLinks && <>
                   {renderLink('Home', PATH_ROOT)}
                   {renderLink('Admin', PATH_ADMIN)}
                 </>}
               </div>
               <div className="hidden xs:block">
-                {renderLink(SITE_DOMAIN_OR_TITLE, PATH_ROOT)}
+                enzo-photography
+                {/*{renderLink(SITE_DOMAIN_OR_TITLE, PATH_ROOT)}*/}
               </div>
             </div>]
             : []}

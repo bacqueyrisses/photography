@@ -38,8 +38,8 @@ export default function EntityLink({
 
   return (
     <span className="group inline-flex items-center gap-2 overflow-hidden">
-      <Link
-        href={href}
+      <div
+        // href={href}
         title={title}
         className={cc(
           'inline-flex gap-[0.23rem]',
@@ -67,7 +67,7 @@ export default function EntityLink({
           )}>
             {icon}
           </span>}
-      </Link>
+      </div>
       {hoverEntity !== undefined &&
         <span className="hidden group-hover:inline">
           {hoverEntity}

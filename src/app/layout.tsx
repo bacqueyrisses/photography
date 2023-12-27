@@ -1,9 +1,9 @@
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/react';
-import { cc } from '@/utility/css';
-import { IBM_Plex_Mono } from 'next/font/google';
-import { Metadata } from 'next';
-import { BASE_URL, SITE_DESCRIPTION, SITE_TITLE } from '@/site/config';
+import {Analytics} from '@vercel/analytics/react';
+import {SpeedInsights} from '@vercel/speed-insights/react';
+import {cc} from '@/utility/css';
+import {IBM_Plex_Mono} from 'next/font/google';
+import {Metadata} from 'next';
+import {BASE_URL, SITE_DESCRIPTION, SITE_TITLE} from '@/site/config';
 import StateProvider from '@/state/AppStateProvider';
 import ThemeProviderClient from '@/site/ThemeProviderClient';
 import Nav from '@/site/Nav';
@@ -11,6 +11,8 @@ import ToasterWithThemes from '@/toast/ToasterWithThemes';
 import PhotoEscapeHandler from '@/photo/PhotoEscapeHandler';
 
 import '../site/globals.css';
+import Header from '@/site/Header';
+import FooterStatic from '@/site/FooterStatic';
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ['latin'],
@@ -67,23 +69,23 @@ export default function RootLayout({
       // next-themes behavior
       suppressHydrationWarning
     >
-      <body className={ibmPlexMono.variable}>
-        <ThemeProviderClient>
-          <main className={cc(
-            'px-3 pb-3',
-            'lg:px-6 lg:pb-6',
-          )}>
-            <Nav />
-            <StateProvider>
-              {children}
-            </StateProvider>
-            <Analytics />
-            <SpeedInsights />
-          </main>
-          <PhotoEscapeHandler />
-          <ToasterWithThemes />
-        </ThemeProviderClient>
-      </body>
+    <body className={ibmPlexMono.variable}>
+    <ThemeProviderClient>
+      <main className={cc(
+        'px-3 pb-3',
+        'lg:px-6 lg:pb-6',
+      )}>
+        <StateProvider>
+        <Header/>
+          {children}
+        </StateProvider>
+        <Analytics/>
+        <SpeedInsights/>
+      </main>
+      <PhotoEscapeHandler/>
+      <ToasterWithThemes/>
+    </ThemeProviderClient>
+    </body>
     </html>
   );
 }
