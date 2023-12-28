@@ -14,7 +14,7 @@ export default function Header() {
           'w-full min-h-[4rem]',
           'leading-none',
         )}>
-        <Link href={'/'} className="hidden xs:block">
+        <Link href={'/'}>
           enzo-photography
         </Link>
       </div>]
