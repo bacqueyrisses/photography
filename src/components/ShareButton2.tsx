@@ -7,7 +7,7 @@ export default function ShareButton2({path}: {path: string}) {
 
       <TbPhotoShare type={'button'} className={"cursor-pointer text-dim hover:text-black transition-all"} size={17} onClick={() => {
         navigator.clipboard.writeText(path);
-        toastSuccess('Link to photo copied');
+        toastSuccess('Link to photo copied')
       }}/>
 
 

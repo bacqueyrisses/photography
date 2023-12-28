@@ -21,7 +21,7 @@ export default function Badge({
     case 'secondary': return cc(
       'px-[0.3rem] py-1 rounded-[0.25rem]',
       'bg-gray-300/30 dark:bg-gray-700/50',
-      'text-medium',
+      'text-medium text-gray-600',
       'font-medium text-[0.7rem]',
       interactive && 'hover:text-gray-900 dark:hover:text-gray-100',
     );
