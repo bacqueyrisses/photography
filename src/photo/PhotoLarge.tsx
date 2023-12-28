@@ -8,7 +8,7 @@ import PhotoTags from '@/tag/PhotoTags';
 import PhotoCamera from '../camera/PhotoCamera';
 import {cameraFromPhoto} from '@/camera';
 import PhotoFilmSimulation from '@/simulation/PhotoFilmSimulation';
-import ShareButton2 from '@/components/ShareButton2';
+import ShareButton from '@/components/ShareButton';
 
 export default function PhotoLarge({
   photo,
@@ -16,18 +16,12 @@ export default function PhotoLarge({
   priority,
   showCamera = true,
   showSimulation = true,
-  shouldShareTag,
-  shouldShareCamera,
-  shouldShareSimulation,
 }: {
   photo: Photo
   primaryTag?: string
   priority?: boolean
   showCamera?: boolean
   showSimulation?: boolean
-  shouldShareTag?: boolean
-  shouldShareCamera?: boolean
-  shouldShareSimulation?: boolean
 }) {
   const tagsToShow = photo.tags.filter(t => t !== primaryTag);
 
@@ -66,13 +60,16 @@ export default function PhotoLarge({
           'mb-4',
         )}>
           {renderMiniGrid(<>
-            <div className="-space-y-0.5">
+            <div className="-space-y-0.5 flex items-center gap-2">
               <Link
                 href={pathForPhoto(photo)}
                 className="font-bold uppercase"
               >
                 {titleForPhoto(photo)}
               </Link>
+              <ShareButton path={absolutePathForPhoto(
+                photo
+              )}/>
               {tagsToShow.length > 0 &&
                 <PhotoTags tags={tagsToShow} />}
             </div>
@@ -118,25 +115,13 @@ export default function PhotoLarge({
               <div className={cc(
                 'grow uppercase',
                 'text-medium',
+                'flex items-center gap-2'
               )}>
                 {photo.takenAtNaiveFormatted}
+                <ShareButton path={absolutePathForPhoto(
+                  photo
+                )}/>
               </div>
-              {/*<ShareButton*/}
-              {/*  path={pathForPhotoShare(*/}
-              {/*    photo,*/}
-              {/*    shouldShareTag ? primaryTag : undefined,*/}
-              {/*    shouldShareCamera ? camera : undefined,*/}
-              {/*    shouldShareSimulation ? photo.filmSimulation : undefined,*/}
-              {/*  )}*/}
-              {/*  prefetch={prefetchShare}*/}
-              {/*  shouldScroll={shouldScrollOnShare}*/}
-              {/*/>*/}
-              <ShareButton2 path={absolutePathForPhoto(
-                photo,
-                shouldShareTag ? primaryTag : undefined,
-                shouldShareCamera ? camera : undefined,
-                shouldShareSimulation ? photo.filmSimulation : undefined,
-              )}/>
             </div>
           </>, false)}
         </div>}

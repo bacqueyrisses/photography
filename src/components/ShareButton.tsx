@@ -1,27 +1,15 @@
-import { TbPhotoShare } from 'react-icons/tb';
-import IconPathButton from '@/components/IconPathButton';
+'use client';
+import {toastSuccess} from '@/toast';
+import {TbPhotoShare} from 'react-icons/tb';
 
-export default function ShareButton({
-  path,
-  prefetch,
-  shouldScroll,
-  dim,
-}: {
-  path: string
-  prefetch?: boolean
-  shouldScroll?: boolean
-  dim?: boolean
-}) {
+export default function ShareButton({path}: {path: string}) {
   return (
-    <IconPathButton {...{
-      path,
-      icon: <TbPhotoShare size={17} className={dim
-        ? 'text-dim'
-        : undefined} />,
-      prefetch,
-      shouldScroll,
-      shouldReplace: true,
-      spinnerColor: 'dim',
-    }} />
-  );
+
+      <TbPhotoShare type={'button'} className={"cursor-pointer text-dim hover:text-black transition-all"} size={14} onClick={() => {
+        navigator.clipboard.writeText(path);
+        toastSuccess('Link to photo copied')
+      }}/>
+
+
+  )
 }
