@@ -60,16 +60,13 @@ export default function PhotoLarge({
           'mb-4',
         )}>
           {renderMiniGrid(<>
-            <div className="-space-y-0.5 flex items-center gap-2">
+            <div className="-space-y-0.5">
               <Link
                 href={pathForPhoto(photo)}
                 className="font-bold uppercase"
               >
                 {titleForPhoto(photo)}
               </Link>
-              <ShareButton path={absolutePathForPhoto(
-                photo
-              )}/>
               {tagsToShow.length > 0 &&
                 <PhotoTags tags={tagsToShow} />}
             </div>
