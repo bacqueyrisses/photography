@@ -34,17 +34,6 @@ export default function Nav({ showTextLinks }: { showTextLinks?: boolean }) {
       ? <Link href={linkOrAction}>{text}</Link>
       : <button onClick={linkOrAction}>{text}</button>;
 
-  const switcherSelectionForPath = (): SwitcherSelection | undefined => {
-    if (pathname === PATH_ROOT) {
-      return 'full-frame';
-    } else if (isPathGrid(pathname)) {
-      return 'grid';
-    } else if (isPathSets(pathname)) {
-      return 'sets';
-    } else if (isPathProtected(pathname)) {
-      return 'admin';
-    }
-  };
 
   return (
     <SiteGrid

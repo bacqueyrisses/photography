@@ -3,12 +3,17 @@ import SiteGrid from '@/components/SiteGrid';
 import ImageLarge from '@/components/ImageLarge';
 import {cc} from '@/utility/css';
 import Link from 'next/link';
-import {pathForPhoto, pathForPhotoShare} from '@/site/paths';
+import {
+  absolutePathForPhoto,
+  pathForPhoto,
+  pathForPhotoShare,
+} from '@/site/paths';
 import PhotoTags from '@/tag/PhotoTags';
 import ShareButton from '@/components/ShareButton';
 import PhotoCamera from '../camera/PhotoCamera';
 import {cameraFromPhoto} from '@/camera';
 import PhotoFilmSimulation from '@/simulation/PhotoFilmSimulation';
+import ShareButton2 from '@/components/ShareButton2';
 
 export default function PhotoLarge({
   photo,
@@ -125,16 +130,22 @@ export default function PhotoLarge({
               )}>
                 {photo.takenAtNaiveFormatted}
               </div>
-              <ShareButton
-                path={pathForPhotoShare(
-                  photo,
-                  shouldShareTag ? primaryTag : undefined,
-                  shouldShareCamera ? camera : undefined,
-                  shouldShareSimulation ? photo.filmSimulation : undefined,
-                )}
-                prefetch={prefetchShare}
-                shouldScroll={shouldScrollOnShare}
-              />
+              {/*<ShareButton*/}
+              {/*  path={pathForPhotoShare(*/}
+              {/*    photo,*/}
+              {/*    shouldShareTag ? primaryTag : undefined,*/}
+              {/*    shouldShareCamera ? camera : undefined,*/}
+              {/*    shouldShareSimulation ? photo.filmSimulation : undefined,*/}
+              {/*  )}*/}
+              {/*  prefetch={prefetchShare}*/}
+              {/*  shouldScroll={shouldScrollOnShare}*/}
+              {/*/>*/}
+              <ShareButton2 path={absolutePathForPhoto(
+                photo,
+                shouldShareTag ? primaryTag : undefined,
+                shouldShareCamera ? camera : undefined,
+                shouldShareSimulation ? photo.filmSimulation : undefined,
+              )}/>
             </div>
           </>, false)}
         </div>}

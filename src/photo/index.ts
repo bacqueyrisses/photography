@@ -88,7 +88,7 @@ export const parsePhotoFromDb = (photoDbRaw: PhotoDb): Photo => {
     exposureCompensationFormatted:
       formatExposureCompensation(photoDb.exposureCompensation),
     takenAtNaiveFormatted:
-      formatDateFromPostgresString(photoDb.takenAtNaive),
+      formatDateFromPostgresString(photoDb.takenAtNaive, true),
   };
 };
 
@@ -166,7 +166,7 @@ export const photoLabelForCount = (count: number) =>
 export const photoQuantityText = (count: number, includeParentheses = true) =>
   includeParentheses
     ? `(${count} ${photoLabelForCount(count)})`
-    : `${count} ${photoLabelForCount(count)}`;  
+    : `${count} ${photoLabelForCount(count)}`;
 
 export type PhotoDateRange = { start: string, end: string };
 

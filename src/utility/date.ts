@@ -4,6 +4,7 @@ const DATE_STRING_FORMAT_SHORT    = 'dd MMM yyyy';
 const DATE_STRING_FORMAT          = 'd MMM yyyy h:mma';
 const DATE_STRING_FORMAT_POSTGRES = 'yyyy-MM-dd HH:mm:ss';
 
+
 export const formatDate = (date: Date, short?: boolean) =>
   format(date, short? DATE_STRING_FORMAT_SHORT : DATE_STRING_FORMAT);
 
