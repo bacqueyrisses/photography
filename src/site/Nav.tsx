@@ -57,7 +57,7 @@ export default function Nav({ showTextLinks }: { showTextLinks?: boolean }) {
                 {showTextLinks && <>
                   {renderLink('Home', PATH_ROOT)}
                   {renderLink('Admin', PATH_ADMIN)}
-                </>}
+
               </div>
               <div>
                 enzo-photography

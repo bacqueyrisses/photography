@@ -3,13 +3,8 @@ import SiteGrid from '@/components/SiteGrid';
 import ImageLarge from '@/components/ImageLarge';
 import {cc} from '@/utility/css';
 import Link from 'next/link';
-import {
-  absolutePathForPhoto,
-  pathForPhoto,
-  pathForPhotoShare,
-} from '@/site/paths';
+import {absolutePathForPhoto, pathForPhoto} from '@/site/paths';
 import PhotoTags from '@/tag/PhotoTags';
-import ShareButton from '@/components/ShareButton';
 import PhotoCamera from '../camera/PhotoCamera';
 import {cameraFromPhoto} from '@/camera';
 import PhotoFilmSimulation from '@/simulation/PhotoFilmSimulation';
@@ -19,24 +14,20 @@ export default function PhotoLarge({
   photo,
   primaryTag,
   priority,
-  prefetchShare,
   showCamera = true,
   showSimulation = true,
   shouldShareTag,
   shouldShareCamera,
   shouldShareSimulation,
-  shouldScrollOnShare,
 }: {
   photo: Photo
   primaryTag?: string
   priority?: boolean
-  prefetchShare?: boolean
   showCamera?: boolean
   showSimulation?: boolean
   shouldShareTag?: boolean
   shouldShareCamera?: boolean
   shouldShareSimulation?: boolean
-  shouldScrollOnShare?: boolean
 }) {
   const tagsToShow = photo.tags.filter(t => t !== primaryTag);
 

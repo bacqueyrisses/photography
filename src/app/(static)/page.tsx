@@ -1,17 +1,17 @@
-import { getPhotosCached, getPhotosCountCached } from '@/cache';
+import {getPhotosCached, getPhotosCountCached} from '@/cache';
 import AnimateItems from '@/components/AnimateItems';
 import MorePhotos from '@/photo/MorePhotos';
 import SiteGrid from '@/components/SiteGrid';
-import { generateOgImageMetaForPhotos } from '@/photo';
+import {generateOgImageMetaForPhotos} from '@/photo';
 import PhotoLarge from '@/photo/PhotoLarge';
 import PhotosEmptyState from '@/photo/PhotosEmptyState';
 import {
-  PaginationParams,
   getPaginationForSearchParams,
+  PaginationParams,
 } from '@/site/pagination';
-import { pathForRoot } from '@/site/paths';
-import { Metadata } from 'next';
-import { MAX_PHOTOS_TO_SHOW_OG } from '@/photo/image-response';
+import {pathForRoot} from '@/site/paths';
+import {Metadata} from 'next';
+import {MAX_PHOTOS_TO_SHOW_OG} from '@/photo/image-response';
 
 export const runtime = 'edge';
 
