@@ -1,9 +1,9 @@
-import { cc } from '@/utility/css';
-import { Photo, PhotoDateRange, dateRangeForPhotos } from '.';
+import {cc} from '@/utility/css';
+import {dateRangeForPhotos, Photo, PhotoDateRange} from '.';
 import ShareButton from '@/components/ShareButton';
 import AnimateItems from '@/components/AnimateItems';
-import { ReactNode } from 'react';
-import { HIGH_DENSITY_GRID } from '@/site/config';
+import {ReactNode} from 'react';
+import {HIGH_DENSITY_GRID} from '@/site/config';
 
 export default function PhotoSetHeader({
   entity,
@@ -61,7 +61,7 @@ export default function PhotoSetHeader({
             ? `${entityVerb} ${selectedPhotoIndex + 1} of ${count ?? photos.length}`
             : entityDescription}
           {selectedPhotoIndex === undefined &&
-            <ShareButton path={sharePath} dim />}
+            <ShareButton path={sharePath} />}
         </span>
         <span className={cc(
           'hidden sm:inline-block',

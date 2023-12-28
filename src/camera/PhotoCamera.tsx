@@ -1,9 +1,8 @@
-import { AiFillApple } from 'react-icons/ai';
-import { pathForCamera } from '@/site/paths';
-import { IoMdCamera } from 'react-icons/io';
-import { Camera } from '.';
-import EntityLink, { EntityLinkExternalProps } from '@/components/EntityLink';
-import { cc } from '@/utility/css';
+import {AiFillApple} from 'react-icons/ai';
+import {IoMdCamera} from 'react-icons/io';
+import {Camera} from '.';
+import Entity, {EntityLinkExternalProps} from '@/components/Entity';
+import {cc} from '@/utility/css';
 
 export default function PhotoCamera({
   camera,
@@ -21,12 +20,11 @@ export default function PhotoCamera({
   const showAppleIcon = !hideAppleIcon && isCameraApple;
 
   return (
-    <EntityLink
+    <Entity
       label={<>
         {!isCameraApple && <>{camera.make}&nbsp;</>}
         {camera.model}
       </>}
-      href={pathForCamera(camera)}
       icon={showAppleIcon
         ? <AiFillApple
           title="Apple"

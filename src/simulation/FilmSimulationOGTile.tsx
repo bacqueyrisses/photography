@@ -1,12 +1,12 @@
-import { Photo, PhotoDateRange } from '@/photo';
+import {Photo, PhotoDateRange} from '@/photo';
 import {
   absolutePathForFilmSimulationImage,
   pathForFilmSimulation,
 } from '@/site/paths';
 import OGTile from '@/components/OGTile';
 import {
-  FilmSimulation,
   descriptionForFilmSimulationPhotos,
+  FilmSimulation,
   titleForFilmSimulation,
 } from '.';
 

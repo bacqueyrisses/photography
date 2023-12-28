@@ -1,8 +1,7 @@
-import { labelForFilmSimulation } from '@/vendors/fujifilm';
+import {labelForFilmSimulation} from '@/vendors/fujifilm';
 import PhotoFilmSimulationIcon from './PhotoFilmSimulationIcon';
-import { pathForFilmSimulation } from '@/site/paths';
-import { FilmSimulation } from '.';
-import EntityLink, { EntityLinkExternalProps } from '@/components/EntityLink';
+import {FilmSimulation} from '.';
+import Entity, {EntityLinkExternalProps} from '@/components/Entity';
 
 export default function PhotoFilmSimulation({
   simulation,
@@ -17,10 +16,9 @@ export default function PhotoFilmSimulation({
   const { small, medium, large } = labelForFilmSimulation(simulation);
 
   return (
-    <EntityLink
+    <Entity
       label={medium}
       labelSmall={small}
-      href={pathForFilmSimulation(simulation)}
       icon={<PhotoFilmSimulationIcon
         simulation={simulation}
         className="translate-y-[-1px]"

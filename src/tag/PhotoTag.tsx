@@ -1,7 +1,6 @@
-import { pathForTag } from '@/site/paths';
-import { FaTag } from 'react-icons/fa';
-import { formatTag } from '.';
-import EntityLink, { EntityLinkExternalProps } from '@/components/EntityLink';
+import {FaTag} from 'react-icons/fa';
+import {formatTag} from '.';
+import Entity, {EntityLinkExternalProps} from '@/components/Entity';
 
 export default function PhotoTag({
   tag,
@@ -14,9 +13,8 @@ export default function PhotoTag({
   countOnHover?: number
 } & EntityLinkExternalProps) {
   return (
-    <EntityLink
+    <Entity
       label={formatTag(tag)}
-      href={pathForTag(tag)}
       icon={<FaTag
         size={11}
         className="text-icon translate-y-[5px]"

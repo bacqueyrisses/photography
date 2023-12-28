@@ -1,15 +1,12 @@
 import AnimateItems from '@/components/AnimateItems';
-import { Photo, PhotoDateRange } from '.';
+import {Photo} from '.';
 import PhotoLarge from './PhotoLarge';
 import SiteGrid from '@/components/SiteGrid';
 import PhotoGrid from './PhotoGrid';
-import { cc } from '@/utility/css';
+import {cc} from '@/utility/css';
 import PhotoLinks from './PhotoLinks';
-import TagHeader from '@/tag/TagHeader';
-import { Camera } from '@/camera';
-import CameraHeader from '@/camera/CameraHeader';
-import { FilmSimulation } from '@/simulation';
-import FilmSimulationHeader from '@/simulation/FilmSimulationHeader';
+import {Camera} from '@/camera';
+import {FilmSimulation} from '@/simulation';
 
 export default function PhotoDetailPage({
   photo,
@@ -18,8 +15,6 @@ export default function PhotoDetailPage({
   tag,
   camera,
   simulation,
-  count,
-  dateRange,
 }: {
   photo: Photo
   photos: Photo[]
@@ -27,47 +22,9 @@ export default function PhotoDetailPage({
   tag?: string
   camera?: Camera
   simulation?: FilmSimulation
-  count?: number
-  dateRange?: PhotoDateRange
 }) {
   return (
     <div>
-      {tag &&
-        <SiteGrid
-          className="mt-4 mb-8"
-          contentMain={
-            <TagHeader
-              key={tag}
-              tag={tag}
-              photos={photos}
-              selectedPhoto={photo}
-              dateRange={dateRange}
-            />}
-        />}
-      {camera &&
-        <SiteGrid
-          className="mt-4 mb-8"
-          contentMain={
-            <CameraHeader
-              camera={camera}
-              photos={photos}
-              selectedPhoto={photo}
-              count={count}
-              dateRange={dateRange}
-            />}
-        />}
-      {simulation &&
-        <SiteGrid
-          className="mt-4 mb-8"
-          contentMain={
-            <FilmSimulationHeader
-              simulation={simulation}
-              photos={photos}
-              selectedPhoto={photo}
-              count={count}
-              dateRange={dateRange}
-            />}
-        />}
       <AnimateItems
         className="md:mb-8"
         animateFromAppState

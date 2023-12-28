@@ -8,10 +8,9 @@ export interface EntityLinkExternalProps {
   dim?: boolean
 }
 
-export default function EntityLink({
+export default function Entity({
   label,
   labelSmall,
-  href,
   icon,
   title,
   type = 'icon-first',
@@ -21,7 +20,6 @@ export default function EntityLink({
 }: {
   label: ReactNode
   labelSmall?: ReactNode
-  href: string
   icon?: ReactNode
   title?: string
   hoverEntity?: ReactNode
@@ -38,7 +36,6 @@ export default function EntityLink({
   return (
     <span className="group inline-flex items-center gap-2 overflow-hidden">
       <div
-        // href={href}
         title={title}
         className={cc(
           'inline-flex gap-[0.23rem] text-main',
