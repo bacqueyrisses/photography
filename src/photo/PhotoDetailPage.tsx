@@ -77,13 +77,8 @@ export default function PhotoDetailPage({
             photo={photo}
             primaryTag={tag}
             priority
-            prefetchShare
             showCamera={!camera}
             showSimulation={!simulation}
-            shouldShareTag={tag !== undefined}
-            shouldShareCamera={camera !== undefined}
-            shouldShareSimulation={simulation !== undefined}
-            shouldScrollOnShare={false}
           />,
         ]}
       />
