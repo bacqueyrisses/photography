@@ -70,9 +70,8 @@ export default function Nav({ showTextLinks }: { showTextLinks?: boolean }) {
                   {renderLink('Admin', PATH_ADMIN)}
                 </>}
               </div>
-              <div className="hidden xs:block">
+              <div>
                 enzo-photography
-                {/*{renderLink(SITE_DOMAIN_OR_TITLE, PATH_ROOT)}*/}
               </div>
             </div>]
             : []}
