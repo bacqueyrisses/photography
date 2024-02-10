@@ -27,7 +27,8 @@
 
 ## Author
 
-- Enzo Bacqueyrisses &ensp;<a href="https://twitter.com/bacqueyrisses"><img src="https://skillicons.dev/icons?i=twitter" style="width: 15px; height: auto;" alt="Enzo Bacqueyrisses Twitter Account" /></a>&ensp;<a href="https://www.linkedin.com/in/bacqueyrisses/"><img src="https://skillicons.dev/icons?i=linkedin" style="width: 15px; height: auto;" alt="Enzo Bacqueyrisses Linkedin Account" /></a>&ensp;<a href="https://www.enzo.codes"><img src="https://github.com/bacqueyrisses/photography/assets/96829831/cd79dcfa-49c1-4ce6-b12e-f11264d69f49" style="width: 15px; height: auto;" alt="Enzo Bacqueyrisses Portfolio" /></a>
+- Enzo Bacqueyrisses &ensp;<a href="https://twitter.com/bacqueyrisses"><img src="https://skillicons.dev/icons?i=twitter" style="width: 15px; height: auto;" alt="Enzo Bacqueyrisses Twitter Account" /></a>&ensp;<a href="https://www.linkedin.com/in/bacqueyrisses/"><img src="https://skillicons.dev/icons?i=linkedin" style="width: 15px; height: auto;" alt="Enzo Bacqueyrisses Linkedin Account" /></a>&ensp;<a href="https://www.enzo.codes"><img src="https://github.com/bacqueyrisses/photography/assets/96829831/e5f7eff7-690b-429d-aa2f-e3c66c53630e" style="width: 15px; height: auto;" alt="Enzo Bacqueyrisses Portfolio" /></a>
+
 
 
 
