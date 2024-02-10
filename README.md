@@ -27,7 +27,7 @@
 
 ## Author
 
-- Enzo Bacqueyrisses &ensp;<a href="https://twitter.com/bacqueyrisses"><img src="https://skillicons.dev/icons?i=twitter" style="width: 15px; height: auto;" alt="Enzo Bacqueyrisses Twitter Account" /></a>&ensp;<a href="https://www.linkedin.com/in/bacqueyrisses/"><img src="https://skillicons.dev/icons?i=linkedin" style="width: 15px; height: auto;" alt="Enzo Bacqueyrisses Linkedin Account" /></a>&ensp;<a href="https://github.com/bacqueyrisses"></a>&ensp;<a href="https://www.enzo.codes"><img src="https://github.com/bacqueyrisses/photography/assets/96829831/57a4c28c-1bcb-4b4b-bb7d-d90726933b84" style="width: 15px; height: auto;" alt="Enzo Bacqueyrisses Portfolio" /></a>
+- Enzo Bacqueyrisses &ensp;<a href="https://twitter.com/bacqueyrisses"><img src="https://skillicons.dev/icons?i=twitter" style="width: 15px; height: auto;" alt="Enzo Bacqueyrisses Twitter Account" /></a>&ensp;<a href="https://www.linkedin.com/in/bacqueyrisses/"><img src="https://skillicons.dev/icons?i=linkedin" style="width: 15px; height: auto;" alt="Enzo Bacqueyrisses Linkedin Account" /></a>&ensp;<a href="https://www.enzo.codes"><img src="https://github.com/bacqueyrisses/photography/assets/96829831/57a4c28c-1bcb-4b4b-bb7d-d90726933b84" style="width: 15px; height: auto;" alt="Enzo Bacqueyrisses Portfolio" /></a>
 
 
 
